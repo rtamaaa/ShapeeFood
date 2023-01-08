@@ -1,0 +1,48 @@
+unit UCheckout;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TCheckout = class(TForm)
+    Panel1: TPanel;
+    Label1: TLabel;
+    MemoAlamat: TMemo;
+    BtnUbah: TButton;
+    Panel2: TPanel;
+    Image1: TImage;
+    NamaMenu: TLabel;
+    Harga: TLabel;
+    Porsi: TLabel;
+    Panel3: TPanel;
+    ComboBox1: TComboBox;
+    ComboBox2: TComboBox;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    TotalPesanan: TLabel;
+    BiayaPengiriman: TLabel;
+    BiayaLayanan: TLabel;
+    Diskon: TLabel;
+    Ltotal: TLabel;
+    Button1: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Checkout: TCheckout;
+
+implementation
+
+{$R *.dfm}
+
+end.

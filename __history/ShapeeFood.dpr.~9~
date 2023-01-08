@@ -1,0 +1,40 @@
+program ShapeeFood;
+
+uses
+  Vcl.Forms,
+  DashboardShapee in 'DashboardShapee.pas' {DashboardShapeeFood},
+  UklikMenu in 'UklikMenu.pas' {KlikMenu},
+  UCheckout in 'UCheckout.pas' {FCheckout},
+  UubahAlamat in 'UubahAlamat.pas' {UbahAlamat},
+  UStatusPesanan in 'UStatusPesanan.pas' {StatusPemesanan},
+  UDashboard in 'UDashboard.pas' {Dashboard},
+  UKAlkulatorBangun in '..\Penggabungan\Kalkulator Bangun 2D dan 3D\UKAlkulatorBangun.pas' {FKalkulatorBangun},
+  Ugaji in '..\Penggabungan\hitung gaji karyawan\Ugaji.pas' {Fgaji1},
+  Ufunction1 in '..\Penggabungan\functionbaru\Ufunction1.pas' {function1},
+  ULooping in '..\Penggabungan\Loop\ULooping.pas' {FLooping},
+  Uarray in '..\Penggabungan\Array\Uarray.pas' {FArray},
+  Urestoran in '..\Penggabungan\Restoran Sederhana\Urestoran.pas' {FRestoran},
+  ULogin in 'ULogin.pas' {FLogin},
+  UKalkulator in '..\Penggabungan\kalkulator\UKalkulator.pas' {Kalkulator};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TDashboardShapeeFood, DashboardShapeeFood);
+  Application.CreateForm(TDashboard, Dashboard);
+  Application.CreateForm(TKlikMenu, KlikMenu);
+  Application.CreateForm(TFCheckout, FCheckout);
+  Application.CreateForm(TUbahAlamat, UbahAlamat);
+  Application.CreateForm(TStatusPemesanan, StatusPemesanan);
+  Application.CreateForm(TFKalkulatorBangun, FKalkulatorBangun);
+  Application.CreateForm(TFgaji1, Fgaji1);
+  Application.CreateForm(Tfunction1, function1);
+  Application.CreateForm(TFLooping, FLooping);
+  Application.CreateForm(TFArray, FArray);
+  Application.CreateForm(TFRestoran, FRestoran);
+  Application.CreateForm(TFLogin, FLogin);
+  Application.CreateForm(TKalkulator, Kalkulator);
+  Application.Run;
+end.

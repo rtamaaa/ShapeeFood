@@ -1,0 +1,56 @@
+unit UCheckout;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TFCheckout = class(TForm)
+    Panel1: TPanel;
+    Label1: TLabel;
+    MemoAlamat: TMemo;
+    BtnUbah: TButton;
+    Panel2: TPanel;
+    Image1: TImage;
+    NamaMenu: TLabel;
+    Harga: TLabel;
+    Porsi: TLabel;
+    Panel3: TPanel;
+    ComboBox1: TComboBox;
+    ComboBox2: TComboBox;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    TotalPesanan: TLabel;
+    BiayaPengiriman: TLabel;
+    BiayaLayanan: TLabel;
+    Diskon: TLabel;
+    Ltotal: TLabel;
+    Button1: TButton;
+    procedure BtnUbahClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FCheckout: TFCheckout;
+
+implementation
+
+{$R *.dfm}
+
+uses UklikMenu, UStatusPesanan, UubahAlamat;
+
+procedure TFCheckout.BtnUbahClick(Sender: TObject);
+begin
+ ubahalamat.show;
+end;
+
+end.

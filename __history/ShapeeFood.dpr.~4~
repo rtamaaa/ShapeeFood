@@ -1,0 +1,22 @@
+program ShapeeFood;
+
+uses
+  Vcl.Forms,
+  DashboardShapee in 'DashboardShapee.pas' {DashboardShapeeFood},
+  UklikMenu in 'UklikMenu.pas' {KlikMenu},
+  UCheckout in 'UCheckout.pas' {FCheckout},
+  UubahAlamat in 'UubahAlamat.pas' {UbahAlamat},
+  UStatusPesanan in 'UStatusPesanan.pas' {StatusPemesanan};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TDashboardShapeeFood, DashboardShapeeFood);
+  Application.CreateForm(TKlikMenu, KlikMenu);
+  Application.CreateForm(TFCheckout, FCheckout);
+  Application.CreateForm(TUbahAlamat, UbahAlamat);
+  Application.CreateForm(TStatusPemesanan, StatusPemesanan);
+  Application.Run;
+end.

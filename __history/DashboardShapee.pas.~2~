@@ -1,0 +1,37 @@
+unit DashboardShapee;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.jpeg,
+  Vcl.ExtCtrls;
+
+type
+  TDashboardShapeeFood = class(TForm)
+    Panel1: TPanel;
+    Image1: TImage;
+    Lmenu1: TLabel;
+    Harga1: TLabel;
+    Panel2: TPanel;
+    Image2: TImage;
+    LMenu2: TLabel;
+    Harga2: TLabel;
+    Panel3: TPanel;
+    Image3: TImage;
+    LMenu3: TLabel;
+    Harga3: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DashboardShapeeFood: TDashboardShapeeFood;
+
+implementation
+
+{$R *.dfm}
+
+end.

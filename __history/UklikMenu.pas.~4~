@@ -1,0 +1,56 @@
+unit UklikMenu;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TKlikMenu = class(TForm)
+    Image1: TImage;
+    NamaMenu: TLabel;
+    HargaMenu: TLabel;
+    Edit1: TEdit;
+    Label1: TLabel;
+    Panel1: TPanel;
+    Checkout: TButton;
+    LabelTotal: TLabel;
+    procedure CheckoutClick(Sender: TObject);
+    procedure Edit1KeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  KlikMenu: TKlikMenu;
+
+implementation
+
+{$R *.dfm}
+
+uses UCheckout;
+
+procedure TKlikMenu.CheckoutClick(Sender: TObject);
+begin
+Fcheckout.show;
+Fcheckout.NamaMenu.Caption:=(klikmenu.NamaMenu.Caption);
+Fcheckout.Harga.caption:=(klikmenu.HargaMenu.caption);
+Fcheckout.totalPesanan.caption:=(klikmenu.LabelTotal.Caption);
+Fcheckout.porsi.caption:=(klikmenu.Edit1.Text);
+end;
+
+procedure TKlikMenu.Edit1KeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+  var harga, porsi, total:real;
+begin
+  harga:=strtofloat(hargamenu.Caption);
+  porsi:=strtofloatdef(edit1.text,0);
+  Total:=porsi*harga;
+  labeltotal.Caption:=floattostr(total);
+
+end;
+
+end.

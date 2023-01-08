@@ -1,0 +1,38 @@
+unit UDashboard;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls;
+
+type
+  TDashboard = class(TForm)
+    CategoryPanelGroup1: TCategoryPanelGroup;
+    CategoryPanel1: TCategoryPanel;
+    BtnAritmatika: TBitBtn;
+    BtnKalkulatorBangun: TBitBtn;
+    BtnHitungGaji: TBitBtn;
+    BtnOlshop: TBitBtn;
+    procedure BtnAritmatikaClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Dashboard: TDashboard;
+
+implementation
+
+{$R *.dfm}
+
+uses UKalkulator;
+
+procedure TDashboard.BtnAritmatikaClick(Sender: TObject);
+begin
+  Kalkulator.show;
+end;
+
+end.

@@ -1,0 +1,18 @@
+program ShapeeFood;
+
+uses
+  Vcl.Forms,
+  DashboardShapee in 'DashboardShapee.pas' {DashboardShapeeFood},
+  UklikMenu in 'UklikMenu.pas' {KlikMenu},
+  UCheckout in 'UCheckout.pas' {Checkout};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TCheckout, Checkout);
+  Application.CreateForm(TDashboardShapeeFood, DashboardShapeeFood);
+  Application.CreateForm(TKlikMenu, KlikMenu);
+  Application.Run;
+end.
